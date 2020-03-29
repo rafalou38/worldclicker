@@ -15,6 +15,31 @@
 	{% block body %}{% endblock body %}
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script href="{% static "bootstrap/bootstrap.js" %}"></script>
-	<script src="static/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="{% static "script.js" %}"></script>
+	{% comment %} <script>
+	$(document).ready(function(e){
+		$('#butotonShoot').click(function (e) { 
+			e.preventDefault();
+			var pk = $(this).attr('clicks')
+			$.ajax({
+				type: 'POST',
+				url: '{% url "test" %}',
+				data : {'clicks' : pk, 'csrfmidelwaretoken': '{{ csrf_token}}'},
+				dataType : 'json',
+				success: function(resonse){
+					$('.bulle').html(resonse['form'])
+					console.log($('.bulle').html(resonse['form']));
+					
+				},
+				error: function(rs, e){
+					console.log(rs.resonseText);
+					
+				}
+				
+			})
+		});
+	});
+	</script> {% endcomment %}
 </body>
 </html>

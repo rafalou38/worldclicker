@@ -18,13 +18,13 @@ from django.urls import path, include
 from . import views
 
 
+# from main_app.views import JoinFormView
 
 urlpatterns = [
 	path('', views.start),
     path('admin/', admin.site.urls),
 
-
     path('home/', include("main_app.urls")),
 
-	#path('join/', JoinFormView.as_view()),
+	# path('join/', JoinFormView.as_view()),
 ]
