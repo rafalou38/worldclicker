@@ -42,7 +42,11 @@ INSTALLED_APPS = [
 
     #modules
     'django_countries',
+
 	'pwa',
+
+	'django_ajax',
+
 	#'channels',
 
     #apps
