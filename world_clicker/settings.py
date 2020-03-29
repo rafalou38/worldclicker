@@ -42,11 +42,11 @@ INSTALLED_APPS = [
 
     #modules
     'django_countries',
-	#'django_ajax'
+	'django_ajax',
 	#'channels',
 
     #apps
-    'main_app.apps.MainAppConfig'
+    'main_app.apps.MainAppConfig',
 
 ]
 
