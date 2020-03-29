@@ -1,7 +1,8 @@
 from django.shortcuts import render, HttpResponse, redirect
 from . import models
 from math import log, floor
-
+from django.http import JsonResponse
+#from django_ajax.decorators import ajax
 
 
 
@@ -23,5 +24,11 @@ def add(request):
 def index(request):
 	
 	return render(request, 'index.html', {"cli":human_format(world.cliks), 'bcli':world.cliks} )
+
+def update(request):
+	world.cliks = world.cliks + 1
+	world.save()
+	return JsonResponse({"status": 200, "statusText": "OK", "content ": ''})
+
 
 
