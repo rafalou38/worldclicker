@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "C:\\Users\\Rafael\\Anaconda3\\envs\\django\\python.exe",
+    "emmet.includeLanguages": {"django-html": "html"},
+    "workbench.tree.indent": 30
+}
