@@ -42,10 +42,11 @@ INSTALLED_APPS = [
 
     #modules
     'django_countries',
+	'pwa',
 	#'channels',
 
     #apps
-    'main_app.apps.MainAppConfig'
+    'main_app.apps.MainAppConfig',
 
 ]
 
@@ -129,3 +130,27 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+
+
+
+
+#pwa
+
+
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static'), ]
+
+PWA_APP_NAME             = 'World Clicker'
+PWA_APP_DESCRIPTION      = "Click for the world!"
+PWA_APP_THEME_COLOR      = '#0A0302'
+PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_DISPLAY          = 'standalone'
+PWA_APP_SCOPE            = '/'
+PWA_APP_ORIENTATION      = 'any'
+PWA_APP_START_URL        = '/'
+PWA_APP_ICONS            = [ { 'src': '/static/icon.png', 'sizes'          : '512x512' } ]
+PWA_APP_ICONS_APPLE      = [ { 'src': '/static/icon.png', 'sizes'        : '512x512' } ]
+PWA_APP_DIR              = 'ltr'
+PWA_APP_LANG             = 'en-US'

@@ -11,6 +11,8 @@ body{
 }
 .navbar-brand:hover{
 	color: #b5b5b5;
+	color: #ffffff;
+
 }
 .bulle{
 	font-size: 50px;
