@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
+{% load pwa %}
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Dosis:800|Ubuntu:700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Dosis:800|Ubuntu:700&display=swap" rel="stylesheet">
 	{% load static %}
 	<meta charset="UTF-8">
 	<title>World Clicker</title>
 	<link rel="stylesheet" href="{% static "bootstrap/bootstrap.css"%}">
 	<link rel="stylesheet" href="{% static "style.css" %}" >
+	{% progressive_web_app_meta %}
 </head>
-<body> 
+<body>
 	<div class="navbar" style="background-color: #1d2647;">
-		<a class="navbar-brand" href= {% url 'index' %} >HOME</a> 
+		<a class="navbar-brand" href= {% url 'index' %} >HOME</a>
+		<div class="text-center" id="titre" style="color:#b5b5b5; position:absolute; left:52em"><h1>World Clicker</h1></div>
 	</div>
 	{% block body %}{% endblock body %}
 	<script href="{% static "bootstrap/bootstrap.js" %}"></script>
-	<script src="static/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="{% static 'script.js' %}"></script>
 </body>
 </html>

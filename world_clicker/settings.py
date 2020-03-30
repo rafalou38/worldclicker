@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'l$s)dgtg6zd9@cuei1eusgflm(uea2=^#ps7@i^yw#f43np(34'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rafalou38.pythonanywhere.com']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     #modules
     'django_countries',
+    'pwa',
 	#'channels',
 
     #apps
@@ -129,3 +130,24 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/home/rafalou38/main_app/static'
+
+
+#pwa
+
+
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static'), ]
+
+PWA_APP_NAME             = 'World Clicker'
+PWA_APP_DESCRIPTION      = "Click for the world!"
+PWA_APP_THEME_COLOR      = '#0A0302'
+PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_DISPLAY          = 'standalone'
+PWA_APP_SCOPE            = '/'
+PWA_APP_ORIENTATION      = 'any'
+PWA_APP_START_URL        = '/'
+PWA_APP_ICONS            = [ { 'src': '/static/icon.png', 'sizes'          : '512x512' } ]
+PWA_APP_ICONS_APPLE      = [ { 'src': '/static/icon.png', 'sizes'        : '512x512' } ]
+PWA_APP_DIR              = 'ltr'
+PWA_APP_LANG             = 'en-US'

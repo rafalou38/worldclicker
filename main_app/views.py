@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from . import models
 from math import log, floor
-
+from django.http import JsonResponse
 
 
 
@@ -21,7 +21,14 @@ def add(request):
 	world.save()
 	return redirect("index")
 def index(request):
-	
+
 	return render(request, 'index.html', {"cli":human_format(world.cliks), 'bcli':world.cliks} )
+
+def update(request):
+	world.cliks = world.cliks + 1
+	world.save()
+	#print(request.GET.get('username'))
+
+	return JsonResponse({'clicks': world.cliks})
 
 

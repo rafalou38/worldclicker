@@ -25,6 +25,7 @@ urlpatterns = [
 
 
     path('home/', include("main_app.urls")),
+    path('', include('pwa.urls'))
 
 	#path('join/', JoinFormView.as_view()),
 ]
