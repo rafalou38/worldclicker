@@ -1,0 +1,66 @@
+body{
+	background-color: #2d3c72;
+}
+.body{
+	text-align: center;
+}
+.navbar-brand{
+	font-size: 30px;
+	color: #9c9c9c;
+	font-weight: 600;
+}
+.navbar-brand:hover{
+	color: #b5b5b5;
+}
+.bulle{
+	font-size: 50px;
+	line-height: 400px;
+	width: 400px;
+	height:  400px;
+	background-color: blueviolet;
+	border-radius: 500px;
+	display: inline-block;
+	margin: 50px;
+	
+
+}
+
+#butotonShoot{
+	
+	/* left: 45%; */
+	top: 80%;
+	/* height: 50px; */
+	font-size: 30px;
+	
+}
+#effet{
+	background-color: crimson;
+}
+/*
+.header{
+
+	border-radius: 0px;
+	background-color: #1d2647;
+	height: 70px;
+	font-size: 3em;
+
+
+}
+.headerElement{
+	position: relative;
+	height: 60px;
+	margin: 0;
+	color: white;
+	text-shadow: black 1px 0 10px;
+	font-size: 1em;
+	left: 30px;
+	top: 5px;
+	user-select: none;
+	text-decoration: none;
+}
+.headerElement:hover{
+
+	text-shadow: black 0 0 20px;
+	font-family: 'Ubuntu', sans-serif;
+
+}*/
