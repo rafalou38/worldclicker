@@ -1,4 +1,5 @@
 body{
+	touch-action: manipulation;
 	background-color: #2d3c72;
 }
 .body{

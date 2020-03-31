@@ -1,6 +1,11 @@
+
+console.log("coucou")
 $("#butotonShoot").click(function (e) {
 	e.preventDefault();
+	alert("ddd")
+	makeBubble()
 	$.ajax({
+		
 		url: 'ajax/update/',
 		// data: {
 		// 	'username': "rafalou38"
@@ -11,3 +16,14 @@ $("#butotonShoot").click(function (e) {
 		}
 	})
 })
+
+
+
+// function makeBubble(){
+	
+// }
+        
+
+
+
+

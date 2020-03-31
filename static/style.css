@@ -1,3 +1,6 @@
+
+
+
 body{
 	background-color: #2d3c72;
 }
@@ -12,19 +15,40 @@ body{
 .navbar-brand:hover{
 	color: #b5b5b5;
 }
-.bulle{
+.bulle {
 	font-size: 50px;
 	line-height: 400px;
 	width: 400px;
-	height:  400px;
+	height: 400px;
 	background-color: blueviolet;
 	border-radius: 500px;
 	display: inline-block;
 	margin: 50px;
+	position: relative;
 	
 
 }
+.pluszone{
+	font-size: 10px;
+	line-height: 0px;
+	width: 35.5%;
+	height: 191px;
+	background-color: #00000000;
+	border-radius: 0px;
+	clear: both;
+	margin: 0px;
+	top: 60%;
+	position: absolute;
+	right: 32%;
+}
 
+.plus{
+	bottom: 0%;
+	font-size: 30px;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+
+}
 #butotonShoot{
 	
 	/* left: 45%; */

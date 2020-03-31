@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'l$s)dgtg6zd9@cuei1eusgflm(uea2=^#ps7@i^yw#f43np(34'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['rafalou38.pythonanywhere.com', 'localhost']
+ALLOWED_HOSTS = ['rafalou38.pythonanywhere.com', 'localhost', '192.168.1.1', '0.0.0.0']
 
 
 # Application definition
@@ -131,7 +131,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/home/rafalou38/main_app/static'
+# STATIC_ROOT = '/home/rafalou38/main_app/static'
 
 
 #pwa
