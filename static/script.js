@@ -8,17 +8,48 @@ function bule(){
     }
 }
 */
+var hfor=true;
 var pluses = []
 function getRandomInt(max) {
 	return Math.floor(Math.random() * Math.floor(max));
   }
 
+mclicks = document.querySelector(".stock").attributes.cli.nodeValue;
+bclicks = document.querySelector(".stock").attributes.bcli.nodeValue;
+
+// $(".wclicks")[0].innerText="c";
+
+$(document).ready(function(){ 
+	$(".wclicks").innerText="vdvdvdvdvdvdfvffgffffggfdggbhgvf"
+	$(".wclicks").niceScroll({
+			cursorcolor:"blueviolet",
+			cursorborderradius:"22px",
+			cursorborder : "0px",
+			cursoropacitymin : 0.3,
+
+			//cursoropacitymax:0.7,
+
+	});
+});
+function setclicks(bol){
+	e = $(".wclicks")[0]
+	//e.style.userSelect = "none";
+	
+	if (bol != true){
+		hfor = !hfor;
+	}
+	if (hfor) {
+		e.innerText = mclicks;
+	} else {
+		e.innerText = bclicks;
+	}
+}
+
+var pluszone = document.querySelector(".pluszone");
+$("#bulle").click(setclicks);
 
 
 
-
-
-var pluszone = document.querySelector(".pluszone")
 
 $("#butotonShoot").click(function (e) {
 	e.preventDefault();
@@ -31,7 +62,14 @@ $("#butotonShoot").click(function (e) {
 		},
 		dataType: 'json',
 		success: function (data) {
-			$("#bulle").text(data.clicks).append(setplus);
+			
+			//$(".wclicks").text(data.clicks);
+			$("#bulle").append(setplus(e));
+			mclicks = data.clicks;
+			bclicks = data.bcli;
+			//console.log(document.getElementsByClassName("bulle"));
+			
+			setclicks(true)
 			animateplus()
 			
 		}
@@ -39,16 +77,26 @@ $("#butotonShoot").click(function (e) {
 	
 })
 
-function setplus(){
+function setplus(e){
+	// // console.log((e.clientX-450)/1.43);
+	// console.log(100 * e.clientX/$(document).width());
+	// console.log(e.clientX);
+	// console.log($(document).width());
+	// console.log("------------------");
+	
+	// console.log((100*(e.clientX-(($(document).width()-160)/2)))/160);
+	// console.log("------------------");
+	
 
+	
 	var plus = document.createElement("p");
 	plus.innerText = "+1";
 
 	pluszone.appendChild(plus);
 	plus.style.position = "absolute";
-	var a = getRandomInt(50)+1;
-	console.log(a+20);
-	plus.style.right = 20 + a + "%";
+
+
+	plus.style.left = (100*(e.clientX-(($(window).width()-160)/2)))/160 +"%";
 	plus.setAttribute("class", "plus");
 	pluses.push(plus)
 	return( pluszone);
@@ -75,3 +123,4 @@ function animateplus(){
 		}
 	}
 }
+

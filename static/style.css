@@ -20,7 +20,7 @@ body{
 	line-height: 400px;
 	width: 400px;
 	height: 400px;
-	background-color: blueviolet;
+	background-color: hsl(271, 76%, 53%);
 	border-radius: 500px;
 	display: inline-block;
 	margin: 50px;
@@ -47,10 +47,17 @@ body{
 	font-size: 30px;
 	font-family: 'Nunito', sans-serif;
 	font-weight: 700;
+	position: fixed;
+
+}
+.wclicks{
+	overflow: auto;
+	user-select: none;
+
 
 }
 #butotonShoot{
-	
+	width: 160px;
 	/* left: 45%; */
 	top: 80%;
 	/* height: 50px; */
@@ -60,6 +67,8 @@ body{
 #effet{
 	background-color: crimson;
 }
+
+
 /*
 .header{
 

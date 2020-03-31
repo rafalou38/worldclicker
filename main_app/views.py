@@ -29,6 +29,6 @@ def update(request):
 	world.save()
 	#print(request.GET.get('username'))
 
-	return JsonResponse({'clicks': human_format(world.cliks)})
+	return JsonResponse({'clicks': human_format(world.cliks), 'bcli':world.cliks})
 
 
