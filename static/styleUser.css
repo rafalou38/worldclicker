@@ -1,0 +1,42 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+h2 {
+	color: #dee2e6;
+}
+a {
+	font-weight: bold;
+}
+p a {
+	font-family: "Nunito", sans-serif;
+	font-size: 20px;
+	color: #9c9c9c;
+	font-weight: 630;
+}
+.account-img {
+	max-width: 150px;
+	margin: 20px;
+}
+
+.media-body {
+	-ms-flex: 1;
+	flex: 1;
+	margin: 20px;
+}
+.fa-pens {
+	color: #80808000;
+}
+.fa-pens:hover {
+	color: #808080;
+}
+.fa-pen {
+	color: #808080;
+}
+.img-pen {
+	width: 90px;
+	height: 90px;
+}

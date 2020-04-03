@@ -41,12 +41,15 @@ INSTALLED_APPS = [
 
 
     #modules
+	'django_extensions',
     'django_countries',
     'pwa',
+	'crispy_forms',
 	#'channels',
 
     #apps
-    'main_app.apps.MainAppConfig'
+    'main_app.apps.MainAppConfig',
+	'users.apps.UsersConfig',
 
 ]
 
@@ -98,13 +101,7 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
@@ -151,3 +148,12 @@ PWA_APP_ICONS            = [ { 'src': '/static/icon.png', 'sizes'          : '51
 PWA_APP_ICONS_APPLE      = [ { 'src': '/static/icon.png', 'sizes'        : '512x512' } ]
 PWA_APP_DIR              = 'ltr'
 PWA_APP_LANG             = 'en-US'
+
+
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL   = 'index'
+LOGIN_URL            = 'login'
+MEDIA_ROOT           = os.path.join(BASE_DIR, "media")
+MEDIA_URL            = "/media/"

@@ -4,16 +4,20 @@
 
     <div class="body">
 		<div class="stock" cli="{{ cli }}" bcli="{{ bcli }}"></div>
+		<script>
+			mclicks = document.querySelector(".stock").attributes.cli.nodeValue;
+			bclicks = document.querySelector(".stock").attributes.bcli.nodeValue;
+		</script>
         <div class="bulle" id="bulle">
 			<div class="wclicks" id="xc">{{ cli }}</div>
 			<div class="pluszone"></div>
 		</div>
-    </div>
 	<div class="text-center">
 		<a href=" {% url 'test' %} ">
 		<button onmousedown="return false" type="button" class="btn btn-danger" id="butotonShoot" clicks={{ cli }}><div id="effet"></div> press me</button>
 		</a>
 	</div>
+    </div>
 
     {% comment %} <button type="button" class="btn btn-danger" id="butotonShoot"><div id="effet"></div> press me</button> {% endcomment %}
 {% endblock body %}

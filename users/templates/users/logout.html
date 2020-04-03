@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static "styleUser.css" %}" >
+{% endblock css %}
+{% block body %}
+<div class="registerzonzon">
+<div class="registerzon">
+	<h2>Vous avez étés déconnecté</h2>
+	<div class="border-top pt-3">
+	<p >
+	<a class="ml-2" href="{% url 'login' %}" >Se reconnecter <i class="fas fa-sign-in-alt"></i></a>
+	</p>
+	</div>
+</div>
+{% endblock %}
